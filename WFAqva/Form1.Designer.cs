@@ -76,25 +76,26 @@
             this.feedToolStripMenuItem,
             this.closeToolStripMenuItem});
             this.contextMenuStrip.Name = "contextMenuStrip";
-            this.contextMenuStrip.Size = new System.Drawing.Size(181, 92);
+            this.contextMenuStrip.Size = new System.Drawing.Size(121, 70);
             // 
             // addFishToolStripMenuItem
             // 
             this.addFishToolStripMenuItem.Name = "addFishToolStripMenuItem";
-            this.addFishToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addFishToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.addFishToolStripMenuItem.Text = "Add Fish";
             this.addFishToolStripMenuItem.Click += new System.EventHandler(this.addFishToolStripMenuItem_Click);
             // 
             // feedToolStripMenuItem
             // 
             this.feedToolStripMenuItem.Name = "feedToolStripMenuItem";
-            this.feedToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.feedToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.feedToolStripMenuItem.Text = "Feed";
+            this.feedToolStripMenuItem.Click += new System.EventHandler(this.feedToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
             // 
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 

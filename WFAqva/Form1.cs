@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Drawing;
+using System.Threading;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WFAqva
@@ -8,7 +10,8 @@ namespace WFAqva
     {
         //int speed = 5;
         bool leftMove, upMove;
-      //  Point mouse_location = new Point();
+        Random rd = new Random();
+        //  Point mouse_location = new Point();
         public Form1()
         {
             InitializeComponent();
@@ -52,6 +55,30 @@ namespace WFAqva
             //if (pB.Bottom >= ClientRectangle.Bottom)
             //    upMove = false;
         }
+
+        private void FeedFish()
+        {
+            Task.Factory.StartNew(() =>
+            {
+                try
+                {
+                    for (int i = 0; i < 100; i++)
+                    {
+                        int width = rd.Next(0, Width);
+                        int height = rd.Next(0, 300);
+                        CreateGraphics().DrawEllipse(new Pen(Brushes.Bisque, 1), new Rectangle(width, height, 5, 5));
+
+                        Thread.Sleep(100);
+                    }
+                }
+                catch (Exception)
+                {
+
+                }
+
+            });
+
+        }
         private void Form1_MouseMove(object sender, MouseEventArgs e)
         {
 
@@ -65,6 +92,11 @@ namespace WFAqva
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void feedToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FeedFish();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
