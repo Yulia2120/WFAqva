@@ -29,45 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.pB = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.contextMenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.addFishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.feedToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.pB)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.contextMenuStrip.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // pB
-            // 
-            this.pB.BackColor = System.Drawing.Color.Transparent;
-            this.pB.Image = global::WFAqva.Properties.Resources.giphy__7_;
-            this.pB.Location = new System.Drawing.Point(775, 296);
-            this.pB.Name = "pB";
-            this.pB.Size = new System.Drawing.Size(104, 104);
-            this.pB.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pB.TabIndex = 0;
-            this.pB.TabStop = false;
             // 
             // timer1
             // 
             this.timer1.Enabled = true;
             this.timer1.Interval = 15;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Image = global::WFAqva.Properties.Resources.giphy;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(282, 251);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // contextMenuStrip
             // 
@@ -80,6 +54,7 @@
             // 
             // addFishToolStripMenuItem
             // 
+            this.addFishToolStripMenuItem.BackColor = System.Drawing.Color.PaleTurquoise;
             this.addFishToolStripMenuItem.Name = "addFishToolStripMenuItem";
             this.addFishToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.addFishToolStripMenuItem.Text = "Add Fish";
@@ -87,6 +62,7 @@
             // 
             // feedToolStripMenuItem
             // 
+            this.feedToolStripMenuItem.BackColor = System.Drawing.Color.LemonChiffon;
             this.feedToolStripMenuItem.Name = "feedToolStripMenuItem";
             this.feedToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.feedToolStripMenuItem.Text = "Feed";
@@ -94,6 +70,7 @@
             // 
             // closeToolStripMenuItem
             // 
+            this.closeToolStripMenuItem.BackColor = System.Drawing.Color.OrangeRed;
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
             this.closeToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.closeToolStripMenuItem.Text = "Close";
@@ -107,27 +84,21 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(900, 650);
             this.ContextMenuStrip = this.contextMenuStrip;
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.pB);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Form1";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
-            ((System.ComponentModel.ISupportInitialize)(this.pB)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.TransparencyKey = System.Drawing.Color.Transparent;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.contextMenuStrip.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pB;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip;
         private System.Windows.Forms.ToolStripMenuItem addFishToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem feedToolStripMenuItem;
